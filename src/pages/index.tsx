@@ -21,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import ImageOverlaySlide from "../components/ImageOverlaySlide";
+import ImageOverlaySlide from "../components/ImageOverlay";
 
 const Home: NextPage = () => {
   return (

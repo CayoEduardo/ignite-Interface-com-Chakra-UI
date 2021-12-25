@@ -1,17 +1,17 @@
 import { Box, Heading, Image, Text, Flex } from "@chakra-ui/react";
 import React from "react";
 
-type ImageOverlaySlideProps = {
+type ImageOverlayProps = {
   imagePath: string;
   title: string;
   subtitle?: string;
 };
 
-const ImageOverlaySlide = ({
+const ImageOverlay = ({
   imagePath,
   title,
   subtitle = "",
-}: ImageOverlaySlideProps) => {
+}: ImageOverlayProps) => {
   return (
     <Box maxW={1240} maxH={450} position="relative">
       <Image src={imagePath} w="100%" h="auto" maxW={1240} maxH={450} />
@@ -48,4 +48,4 @@ const ImageOverlaySlide = ({
   );
 };
 
-export default ImageOverlaySlide;
+export default ImageOverlay;
