@@ -1,5 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
 import Header from "../components/Header";
 import {
@@ -24,6 +25,8 @@ import "swiper/css/scrollbar";
 import ImageOverlaySlide from "../components/ImageOverlay";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
     <Flex
       flexDir="column"
@@ -84,7 +87,7 @@ const Home: NextPage = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>
+          <SwiperSlide onClick={() => router.push("/europa")}>
             <ImageOverlaySlide imagePath="/images/europa.jpg" title="Europa" />
           </SwiperSlide>
           <SwiperSlide>

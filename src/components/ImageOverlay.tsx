@@ -13,7 +13,12 @@ const ImageOverlay = ({
   subtitle = "",
 }: ImageOverlayProps) => {
   return (
-    <Box maxW={1240} maxH={450} position="relative">
+    <Box
+      maxW={1240}
+      maxH={450}
+      position="relative"
+      _hover={{ cursor: "pointer" }}
+    >
       <Image src={imagePath} w="100%" h="auto" maxW={1240} maxH={450} />
       <Flex
         position="absolute"
