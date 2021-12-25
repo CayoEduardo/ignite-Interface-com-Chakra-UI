@@ -170,6 +170,7 @@ const Europa = () => {
             {/* Card */}
             {cidades.map((cidade: Cidade) => (
               <Card
+                key={cidade.city}
                 imagePath={cidade.imagePath}
                 city={cidade.city}
                 country={cidade.country}
