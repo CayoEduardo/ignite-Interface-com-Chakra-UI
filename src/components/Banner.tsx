@@ -5,33 +5,46 @@ const Banner = () => {
   return (
     <Flex
       w="100%"
-      h={370}
+      h={380}
       flexDir="column"
-      p="8"
-      px="20"
+      // p="8"
+      px={{ base: "0", md: "20" }}
       backgroundImage={`url('/images/Banner.png')`}
       backgroundSize="cover"
       justify="center"
     >
-      <Box>
+      <Flex
+        flexDir="column"
+        align={{ base: "center", md: "flex-start" }}
+        justify="center"
+      >
         <Box>
-          <Heading fontSize="2.25rem" fontWeight="medium" color="white">
+          <Heading
+            fontSize={{ base: "1.70rem", sm: "2rem", lg: "2.25rem" }}
+            fontWeight="medium"
+            color="white"
+          >
             5 Continentes,
           </Heading>
-          <Heading fontSize="2.25rem" fontWeight="medium" color="white">
+          <Heading
+            fontSize={{ base: "1.70rem", sm: "2rem", lg: "2.25rem" }}
+            fontWeight="medium"
+            color="white"
+          >
             infinitas possibilidades.
           </Heading>
         </Box>
         <Text
           mt="5"
-          w="40ch"
-          fontSize="1.25rem"
+          textAlign="left"
+          w={{ base: "30ch", lg: "40ch" }}
+          fontSize={{ base: "1rem", sm: "1.25rem", lg: "1.25rem" }}
           fontWeight="regular"
           color="white"
         >
           Chegou a hora de tirar do papel a viagem que você sempre sonhou.
         </Text>
-      </Box>
+      </Flex>
     </Flex>
   );
 };

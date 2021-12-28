@@ -55,9 +55,9 @@ const Home: NextPage = () => {
       />
 
       {/* Vamos nessa? */}
-      <Box px="300px" py="52px">
+      <Box py="52px">
         <Text
-          fontSize="2.25rem"
+          fontSize={{ base: "1.75rem", lg: "2.25rem" }}
           fontWeight="medium"
           color="headingAndText.default"
           textAlign="center"
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           Vamos nessa?
         </Text>
         <Text
-          fontSize="2.25rem"
+          fontSize={{ base: "1.75rem", lg: "2.25rem" }}
           fontWeight="medium"
           color="headingAndText.default"
           textAlign="center"
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         </Text>
       </Box>
 
-      <Box px="100px">
+      <Box px={{ base: "25px", md: "100px" }}>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}

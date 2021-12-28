@@ -19,7 +19,14 @@ const ImageOverlay = ({
       position="relative"
       _hover={{ cursor: "pointer" }}
     >
-      <Image src={imagePath} w="100%" h="auto" maxW={1240} maxH={450} />
+      <Image
+        src={imagePath}
+        w="100%"
+        // minH={450}
+        h="auto"
+        maxW={1240}
+        maxH={450}
+      />
       <Flex
         position="absolute"
         top="0"

@@ -1,9 +1,18 @@
 import React from "react";
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
 const TravelTypes = () => {
   return (
-    <Flex mt="20" h={145} px={180} justify="space-between" align="center">
+    <SimpleGrid
+      mt={{ base: 8, lg: 20 }}
+      // h={145}
+      px={{ base: "90px", md: "120px", lg: "180px" }}
+      gap={6}
+      justify="space-between"
+      align="center"
+      // bg="red"
+      minChildWidth={120}
+    >
       <Flex flexDir="column" align="center" justify="space-between">
         <Image w={85} h={85} src="/images/cocktail.png" />
         <Text
@@ -59,7 +68,7 @@ const TravelTypes = () => {
           e mais...
         </Text>
       </Flex>
-    </Flex>
+    </SimpleGrid>
   );
 };
 

@@ -66,10 +66,10 @@ const Europa = () => {
       </Box>
 
       {/* Container */}
-      <Box px={140}>
+      <Box px={{ base: 8, lg: 140 }}>
         {/* Infos */}
-        <SimpleGrid columns={2} gap="4">
-          <Box pt="80px">
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap="4">
+          <Box pt={{ base: 6, md: "80px" }}>
             <Text
               fontSize="1.5rem"
               fontWeight="regular"
@@ -82,7 +82,12 @@ const Europa = () => {
               sudeste
             </Text>
           </Box>
-          <Flex align="center" justify="space-around" pt="80px">
+          <Flex
+            flexDir={{ base: "column", sm: "row" }}
+            align="center"
+            justify={{ base: "space-between", md: "space-around" }}
+            pt={{ base: 10, md: "80px" }}
+          >
             <Box>
               <Text
                 textAlign="center"
@@ -126,7 +131,7 @@ const Europa = () => {
         </SimpleGrid>
 
         {/* Container cards Cidades */}
-        <Box pt="80px">
+        <Box pt={{ base: 10, md: "80px" }}>
           <Heading
             fontSize="2.25rem"
             fontWeight="medium"
@@ -134,7 +139,14 @@ const Europa = () => {
           >
             Cidades + 100
           </Heading>
-          <SimpleGrid columns={4} gap={8} mt="80px">
+          <SimpleGrid
+            minChildWidth="220px"
+            // columns={{ md: 4 }}
+            // gap={}
+            rowGap={10}
+            columnGap={8}
+            mt={{ base: 10, md: "80px" }}
+          >
             {/* Card */}
             {europa.map((cidade: Cidade) => (
               <Card
