@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Card from "../components/Card";
 import Header from "../components/Header";
-import { europa } from "../utils/paises";
+import { america } from "../utils/paises";
 
 type Cidade = {
   imagePath: string;
@@ -19,7 +19,7 @@ type Cidade = {
   flag: string;
 };
 
-const Europa = () => {
+const America = () => {
   return (
     <Flex
       flexDir="column"
@@ -34,7 +34,7 @@ const Europa = () => {
       {/* Overlay */}
       <Box maxW={1440} maxH={450} position="relative">
         <Image
-          src="/images/europa.jpg"
+          src="/images/americas.jpg"
           w="100%"
           h="auto"
           maxW={1440}
@@ -59,7 +59,7 @@ const Europa = () => {
               color="white"
               ml="8"
             >
-              Europa
+              América
             </Heading>
           </Box>
         </Flex>
@@ -75,11 +75,21 @@ const Europa = () => {
               fontWeight="regular"
               color="headingAndText.default"
             >
-              A Europa é, por convenção, um dos seis continentes do mundo.
-              Compreendendo a península ocidental da Eurásia, a Europa
-              geralmente divide-se da Ásia a leste pela divisória de águas dos
-              montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-              sudeste
+              América é o continente localizado no hemisfério ocidental e que se
+              estende, no sentido norte-sul, desde o oceano Ártico até o cabo
+              Horn, ao longo de cerca de 15 mil quilômetros.
+            </Text>
+            <br />
+            <Text
+              fontSize="1.5rem"
+              fontWeight="regular"
+              color="headingAndText.default"
+            >
+              ambém é conhecida pela expressão "Novo Mundo", neste caso em
+              oposição à Eurafrásia, considerada o "Velho Mundo", e à Oceania,
+              chamada de "Novíssimo Mundo". A maioria dos estudiosos aponta o
+              nome do navegador italiano Américo Vespúcio como origem
+              etimológica do topônimo "América", cujo gentílico é "americano"
             </Text>
           </Box>
           <Flex align="center" justify="space-around" pt="80px">
@@ -136,7 +146,7 @@ const Europa = () => {
           </Heading>
           <SimpleGrid columns={4} gap={8} mt="80px">
             {/* Card */}
-            {europa.map((cidade: Cidade) => (
+            {america?.map((cidade: Cidade) => (
               <Card
                 key={cidade.city}
                 imagePath={cidade.imagePath}
@@ -152,4 +162,4 @@ const Europa = () => {
   );
 };
 
-export default Europa;
+export default America;

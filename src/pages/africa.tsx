@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Card from "../components/Card";
 import Header from "../components/Header";
-import { europa } from "../utils/paises";
+import { africa } from "../utils/paises";
 
 type Cidade = {
   imagePath: string;
@@ -19,7 +19,7 @@ type Cidade = {
   flag: string;
 };
 
-const Europa = () => {
+const Africa = () => {
   return (
     <Flex
       flexDir="column"
@@ -34,7 +34,7 @@ const Europa = () => {
       {/* Overlay */}
       <Box maxW={1440} maxH={450} position="relative">
         <Image
-          src="/images/europa.jpg"
+          src="/images/africa.jpg"
           w="100%"
           h="auto"
           maxW={1440}
@@ -59,7 +59,7 @@ const Europa = () => {
               color="white"
               ml="8"
             >
-              Europa
+              Africa
             </Heading>
           </Box>
         </Flex>
@@ -75,11 +75,24 @@ const Europa = () => {
               fontWeight="regular"
               color="headingAndText.default"
             >
-              A Europa é, por convenção, um dos seis continentes do mundo.
-              Compreendendo a península ocidental da Eurásia, a Europa
-              geralmente divide-se da Ásia a leste pela divisória de águas dos
-              montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-              sudeste
+              A África é o terceiro continente mais extenso (depois da Ásia e da
+              América) com cerca de 30 milhões de quilômetros quadrados,
+              cobrindo 20,3% da área total da terra firme do planeta. É o
+              segundo continente mais populoso da Terra (atrás da Ásia) com
+              cerca de um bilhão de pessoas (estimativa para 2005[1]),
+              representando cerca de um sétimo da população mundial, e 54 países
+              independentes.
+            </Text>
+            <br />
+            <Text
+              fontSize="1.5rem"
+              fontWeight="regular"
+              color="headingAndText.default"
+            >
+              Apresenta grande diversidade étnica, cultural, social e política.
+              Dos trinta países mais pobres do mundo (com mais problemas de
+              subnutrição, analfabetismo, baixa expectativa de vida), pelo menos
+              21 são africanos.
             </Text>
           </Box>
           <Flex align="center" justify="space-around" pt="80px">
@@ -136,7 +149,7 @@ const Europa = () => {
           </Heading>
           <SimpleGrid columns={4} gap={8} mt="80px">
             {/* Card */}
-            {europa.map((cidade: Cidade) => (
+            {africa?.map((cidade: Cidade) => (
               <Card
                 key={cidade.city}
                 imagePath={cidade.imagePath}
@@ -152,4 +165,4 @@ const Europa = () => {
   );
 };
 
-export default Europa;
+export default Africa;

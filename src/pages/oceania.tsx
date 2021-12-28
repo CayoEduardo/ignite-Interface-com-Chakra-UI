@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Card from "../components/Card";
 import Header from "../components/Header";
-import { europa } from "../utils/paises";
+import { oceania } from "../utils/paises";
 
 type Cidade = {
   imagePath: string;
@@ -19,7 +19,7 @@ type Cidade = {
   flag: string;
 };
 
-const Europa = () => {
+const Oceania = () => {
   return (
     <Flex
       flexDir="column"
@@ -34,7 +34,7 @@ const Europa = () => {
       {/* Overlay */}
       <Box maxW={1440} maxH={450} position="relative">
         <Image
-          src="/images/europa.jpg"
+          src="/images/oceania.jpg"
           w="100%"
           h="auto"
           maxW={1440}
@@ -59,7 +59,7 @@ const Europa = () => {
               color="white"
               ml="8"
             >
-              Europa
+              Oceania
             </Heading>
           </Box>
         </Flex>
@@ -75,11 +75,23 @@ const Europa = () => {
               fontWeight="regular"
               color="headingAndText.default"
             >
-              A Europa é, por convenção, um dos seis continentes do mundo.
-              Compreendendo a península ocidental da Eurásia, a Europa
-              geralmente divide-se da Ásia a leste pela divisória de águas dos
-              montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-              sudeste
+              Oceania ou Oceânia é uma região geográfica composta por vários
+              grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e
+              Micronésia). O termo Oceania foi criado em 1831 pelo explorador
+              francês Dumont d'Urville. O termo é usado hoje em vários idiomas
+              para designar uma região geográfica e política que compreende o
+              continente da Austrália e ilhas do Oceano Pacífico adjacentes.
+            </Text>
+            <br />
+            <Text
+              fontSize="1.5rem"
+              fontWeight="regular"
+              color="headingAndText.default"
+            >
+              Os limites da Oceania são definidos de várias maneiras. A maioria
+              das definições reconhecem partes da Australásia como a Austrália,
+              Nova Zelândia e Nova Guiné, e parte do Arquipélago Malaio como
+              sendo partes da Oceania.
             </Text>
           </Box>
           <Flex align="center" justify="space-around" pt="80px">
@@ -136,7 +148,7 @@ const Europa = () => {
           </Heading>
           <SimpleGrid columns={4} gap={8} mt="80px">
             {/* Card */}
-            {europa.map((cidade: Cidade) => (
+            {oceania?.map((cidade: Cidade) => (
               <Card
                 key={cidade.city}
                 imagePath={cidade.imagePath}
@@ -152,4 +164,4 @@ const Europa = () => {
   );
 };
 
-export default Europa;
+export default Oceania;

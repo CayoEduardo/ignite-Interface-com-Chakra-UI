@@ -10,7 +10,7 @@ import {
 import React from "react";
 import Card from "../components/Card";
 import Header from "../components/Header";
-import { europa } from "../utils/paises";
+import { asia } from "../utils/paises";
 
 type Cidade = {
   imagePath: string;
@@ -19,7 +19,7 @@ type Cidade = {
   flag: string;
 };
 
-const Europa = () => {
+const Asia = () => {
   return (
     <Flex
       flexDir="column"
@@ -34,7 +34,7 @@ const Europa = () => {
       {/* Overlay */}
       <Box maxW={1440} maxH={450} position="relative">
         <Image
-          src="/images/europa.jpg"
+          src="/images/asia.jpg"
           w="100%"
           h="auto"
           maxW={1440}
@@ -59,7 +59,7 @@ const Europa = () => {
               color="white"
               ml="8"
             >
-              Europa
+              Asia
             </Heading>
           </Box>
         </Flex>
@@ -75,11 +75,19 @@ const Europa = () => {
               fontWeight="regular"
               color="headingAndText.default"
             >
-              A Europa é, por convenção, um dos seis continentes do mundo.
-              Compreendendo a península ocidental da Eurásia, a Europa
-              geralmente divide-se da Ásia a leste pela divisória de águas dos
-              montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a
-              sudeste
+              A Ásia é o maior dos continentes, tanto em área como em população.
+              Abrange um terço das partes sólidas da superfície da Terra e é
+              responsável por abrigar quase três quintos da população mundial.
+            </Text>
+            <br />
+            <Text
+              fontSize="1.5rem"
+              fontWeight="regular"
+              color="headingAndText.default"
+            >
+              Na Ásia são encontradas algumas das montanhas mais altas do mundo;
+              os rios mais extensos; os maiores desertos, planícies e planaltos;
+              as selvas e florestas mais densas.
             </Text>
           </Box>
           <Flex align="center" justify="space-around" pt="80px">
@@ -136,7 +144,7 @@ const Europa = () => {
           </Heading>
           <SimpleGrid columns={4} gap={8} mt="80px">
             {/* Card */}
-            {europa.map((cidade: Cidade) => (
+            {asia?.map((cidade: Cidade) => (
               <Card
                 key={cidade.city}
                 imagePath={cidade.imagePath}
@@ -152,4 +160,4 @@ const Europa = () => {
   );
 };
 
-export default Europa;
+export default Asia;

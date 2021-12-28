@@ -90,19 +90,19 @@ const Home: NextPage = () => {
           <SwiperSlide onClick={() => router.push("/europa")}>
             <ImageOverlaySlide imagePath="/images/europa.jpg" title="Europa" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => router.push("/asia")}>
             <ImageOverlaySlide imagePath="/images/asia.jpg" title="Asia" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => router.push("/africa")}>
             <ImageOverlaySlide imagePath="/images/africa.jpg" title="Africa" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => router.push("/oceania")}>
             <ImageOverlaySlide
               imagePath="/images/oceania.jpg"
               title="Oceania"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => router.push("/america")}>
             <ImageOverlaySlide
               imagePath="/images/americas.jpg"
               title="Américas"
