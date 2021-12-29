@@ -111,7 +111,7 @@ const Asia = () => {
                 fontWeight="semibold"
                 color="highlight"
               >
-                60
+                2.301
               </Text>
               <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
                 línguas
@@ -124,7 +124,7 @@ const Asia = () => {
                 fontWeight="semibold"
                 color="highlight"
               >
-                27
+                51
               </Text>
               <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
                 cidades + 100

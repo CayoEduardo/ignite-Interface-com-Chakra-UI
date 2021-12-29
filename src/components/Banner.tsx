@@ -16,18 +16,18 @@ const Banner = () => {
       <Flex
         flexDir="column"
         align={{ base: "center", md: "flex-start" }}
-        justify="center"
+        justify={{ base: "flex-start", md: "center" }}
       >
         <Box>
           <Heading
-            fontSize={{ base: "1.70rem", sm: "2rem", lg: "2.25rem" }}
+            fontSize={{ base: "2rem" }}
             fontWeight="medium"
             color="white"
           >
             5 Continentes,
           </Heading>
           <Heading
-            fontSize={{ base: "1.70rem", sm: "2rem", lg: "2.25rem" }}
+            fontSize={{ base: "2rem" }}
             fontWeight="medium"
             color="white"
           >
@@ -37,7 +37,7 @@ const Banner = () => {
         <Text
           mt="5"
           textAlign="left"
-          w={{ base: "30ch", lg: "40ch" }}
+          w={{ base: "35ch" }}
           fontSize={{ base: "1rem", sm: "1.25rem", lg: "1.25rem" }}
           fontWeight="regular"
           color="white"

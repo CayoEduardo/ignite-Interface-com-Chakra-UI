@@ -129,7 +129,7 @@ const Africa = () => {
                 fontWeight="semibold"
                 color="highlight"
               >
-                27
+                3
               </Text>
               <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
                 cidades + 100

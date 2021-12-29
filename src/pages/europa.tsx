@@ -6,6 +6,8 @@ import {
   Image,
   SimpleGrid,
   theme,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import React from "react";
 import Card from "../components/Card";
@@ -44,8 +46,8 @@ const Europa = () => {
           position="absolute"
           top="0"
           left="0"
-          align="flex-end"
-          justify="flex-start"
+          align={{ base: "center", md: "flex-end" }}
+          justify={{ base: "center", md: "flex-start" }}
           w="100%"
           h="100%"
           p="16"
@@ -57,7 +59,7 @@ const Europa = () => {
               fontSize="2.375rem"
               fontWeight="bold"
               color="white"
-              ml="8"
+              ml={{ base: "0", md: "8" }}
             >
               Europa
             </Heading>
@@ -83,7 +85,7 @@ const Europa = () => {
             </Text>
           </Box>
           <Flex
-            flexDir={{ base: "column", sm: "row" }}
+            flexDir={"row"}
             align="center"
             justify={{ base: "space-between", md: "space-around" }}
             pt={{ base: 10, md: "80px" }}
@@ -97,7 +99,11 @@ const Europa = () => {
               >
                 50
               </Text>
-              <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
+              <Text
+                textAlign="center"
+                fontSize={{ base: "1.25rem", md: "1.5rem" }}
+                fontWeight="semibold"
+              >
                 países
               </Text>
             </Box>
@@ -110,7 +116,11 @@ const Europa = () => {
               >
                 60
               </Text>
-              <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
+              <Text
+                textAlign="center"
+                fontSize={{ base: "1.25rem", md: "1.5rem" }}
+                fontWeight="semibold"
+              >
                 línguas
               </Text>
             </Box>
@@ -123,7 +133,11 @@ const Europa = () => {
               >
                 27
               </Text>
-              <Text textAlign="center" fontSize="1.5rem" fontWeight="semibold">
+              <Text
+                textAlign="center"
+                fontSize={{ base: "1.25rem", md: "1.5rem" }}
+                fontWeight="semibold"
+              >
                 cidades + 100
               </Text>
             </Box>
@@ -133,6 +147,7 @@ const Europa = () => {
         {/* Container cards Cidades */}
         <Box pt={{ base: 10, md: "80px" }}>
           <Heading
+            textAlign={{ base: "center", md: "left" }}
             fontSize="2.25rem"
             fontWeight="medium"
             color="headingAndText.default"
@@ -140,23 +155,25 @@ const Europa = () => {
             Cidades + 100
           </Heading>
           <SimpleGrid
-            minChildWidth="220px"
-            // columns={{ md: 4 }}
-            // gap={}
+            minChildWidth={250}
             rowGap={10}
-            columnGap={8}
+            columnGap={4}
             mt={{ base: 10, md: "80px" }}
           >
             {/* Card */}
-            {europa.map((cidade: Cidade) => (
-              <Card
-                key={cidade.city}
-                imagePath={cidade.imagePath}
-                city={cidade.city}
-                country={cidade.country}
-                flag={cidade.flag}
-              />
-            ))}
+            {europa.map((cidade: Cidade, index) => {
+              return (
+                <Flex justify="center">
+                  <Card
+                    key={cidade.city}
+                    imagePath={cidade.imagePath}
+                    city={cidade.city}
+                    country={cidade.country}
+                    flag={cidade.flag}
+                  />
+                </Flex>
+              );
+            })}
           </SimpleGrid>
         </Box>
       </Box>
