@@ -161,7 +161,7 @@ const Europa = () => {
             mt={{ base: 10, md: "80px" }}
           >
             {/* Card */}
-            {europa.map((cidade: Cidade, index) => {
+            {europa.map((cidade: Cidade) => {
               return (
                 <Flex justify="center">
                   <Card
