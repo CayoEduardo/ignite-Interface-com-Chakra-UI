@@ -5,4 +5,11 @@ export const theme = extendTheme({
     headingAndText: { default: "#47585B" },
     highlight: "#FFBA08",
   },
+  styles: {
+    global: {
+      body: {
+        fontFamily: "Poppins",
+      },
+    },
+  },
 });
